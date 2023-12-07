@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic formy</title>
+    <style>
+      button {
+        background-color: white;
+        color: black;
+        border:1px solid grey;
+        border-radius: 20px;
+      }
+      div {
+        margin-bottom: 20px;
+      }
+      label{
+        display: inline-block;
+        margin-bottom:10px;
+      }
+      label,
+      span {
+        font-weight: bold;
+      }
+      #required{
+        color:red;
+      }
+    </style>
+  </head>
+  <body>
+    <form method="get" action="#">
+      <h1>Order Form</h1>
+      <div>
+        <label for="buy">What would you like to buy?</label><br />
+        <select name="buy">
+          <option value="A">A</option>
+          <option value="B">B</option>
+          <option value="C">C</option>
+        </select>
+      </div>
+      <div>
+        <label for="order">How many would you like to order</label><br />
+        <input type="radio" name="order" value="1 - $10" /><span>1 - $10</span
+        ><br />
+        <input type="radio" name="order" value="2 - $20" /><span>2 - $20</span
+        ><br />
+        <input type="radio" name="order" value="3 - $25" /><span>3 - $25</span
+        ><br />
+      </div>
+      <div>
+        <label for="name">Name<sup id="required">*</sup></label
+        ><br />
+        <input type="text" name="name" placeholder="FirstName" />
+        <input type="text" name="name" placeholder="LastName" />
+      </div>
+      <div>
+        <label for="email">Email</label><br />
+        <input type="text" name="email" />
+      </div>
+      <div>
+        <label for="phone">Phone Number</label><br />
+        <input type="text" name="phone1" size="5" />
+        <span>-</span>
+        <input type="text" name="phone2" size="5" />
+        <span>-</span>
+        <input type="text" name="phone3" size="5" />
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
