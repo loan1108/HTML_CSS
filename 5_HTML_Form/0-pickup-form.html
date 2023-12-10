@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pickup form</title>
+    <style>
+        main {
+            margin: 100px;
+        }
+        tr td{
+            padding-bottom: 20px;
+            
+        }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <main>
+        <h1>Pickup Form</h1>
+        <form action="#" method="get">
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <label for="name">Name</label>
+                </td>
+                <td>
+                  <input type="text" name="name" id="name" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="phone">Phone</label>
+                </td>
+                <td>
+                  <input type="text" name="phone" id="phone" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="email">Email</label>
+                </td>
+                <td>
+                  <input type="email" name="email" id="email" />
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <fieldset>
+                    <legend>Which taxi do you require?</legend>
+                    <input type="radio" name="taxi" value="Car" />
+                    <label for="taxi">Car</label><br />
+                    <input type="radio" name="taxi" value="Van" />
+                    <label for="taxi">Van</label><br />
+                    <input type="radio" name="taxi" value="Tuk Tuk" />
+                    <label for="taxi">Tuk tuk</label><br />
+                  </fieldset>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <fieldset>
+                    <legend>Extras</legend>
+                    <input type="checkbox" name="extras" value="Baby Seat" />
+                    <label for="extras">Baby Seat</label><br />
+                    <input
+                      type="checkbox"
+                      name="extras"
+                      value="Wheelchair Access"
+                    />
+                    <label for="extras">Wheelchair Access</label><br />
+                    <input type="checkbox" name="extras" value="Stock Tip" />
+                    <label for="extras">Stock Tip</label><br />
+                  </fieldset>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for=" pick-date">Pick Date/Time</label>
+                </td>
+                <td>
+                  <input type="date" name="pick-date" id="pick-date" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="pickup-place">Pickup Place</label>
+                </td>
+                <td>
+                  <select id="pickup-place" name="pickup-place">
+                    <option value="" selected>Select One</option>
+                    <option value="Place One">Place One</option>
+                    <option value="Place Two">Place Two</option>
+                    <option value="Place Three">Place Three</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="dropoff-place">Dropoff Place</label>
+                </td>
+                <td>
+                  <input type="text" name="dropoff-place" id="dropoff-place" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="special-instructions">Special Instruction</label>
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    name="special-instructions"
+                    id="special-instructions"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="submit" value="Submit Booking" />
+                </td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>
