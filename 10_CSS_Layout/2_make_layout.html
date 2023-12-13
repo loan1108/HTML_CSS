@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tạo layout với HTML5 và CSS3</title>
+  <style>
+    *{
+        margin:0;
+        padding:0
+    }
+    #main{
+        margin:10px;
+        text-align: center;
+        width:100%;
+        height:800px;
+    }
+    header, nav, #container, footer{
+        width:100%;
+        margin-bottom: 10px;
+    }
+    header, nav, footer{
+        height:25px;
+        border:2px solid gainsboro;
+    }
+    #container {
+        box-sizing: border-box;
+        height :600px;
+        border: none;
+    }
+    #container section {
+        float: left;
+        width:60%;
+    }
+    #container section article{
+        box-sizing: border-box;
+        height:300px;
+        border:2px solid gainsboro;
+        
+    }
+    #container aside {
+        border:2px solid gainsboro;
+        width:39.5%;
+        height: 600px;
+        float:right;
+    }
+    #container section #first-article{
+        margin-bottom:5px;
+    }
+  </style>
+</head>
+  <body>
+    <div id="main">
+      <header>This is header</header>
+      <nav>This is navigation</nav>
+      <div id="container">
+        <section>
+          <article id="first-article">This is first article</article>
+          <article>This is second-article</article>
+        </section>
+        <aside>This is a side</aside>
+      </div>
+      <footer>This is footer</footer>
+    </div>
+  </body>
+</html>
