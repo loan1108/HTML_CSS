@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            text-align: center;
+            color:red;
+        }
+        #main {
+            padding:20px;
+        }
+        #head, #head-link,#container,#footer{
+            width: 100%;
+            background-color: rgb(195, 237, 237);
+            margin-bottom: 5px;
+            border: 2px solid gainsboro;
+        }
+        #head{
+            
+            height:50px;
+        }
+        #main #head-link{
+            height:25px;
+        }
+        #main #container{
+            border:none;
+            height:500px;
+        }
+        #main #container #left, #right, #content{
+            height:500px;
+            float:left;
+            background-color:rgb(195, 237, 237);
+        }
+        #main #container #left{
+            width: 25%;
+        }
+        #main #container #content {
+            width: 50%;
+            background-color:white;
+        }
+        #main #container #right{
+            width:25%;
+            background-color:rgb(136, 242, 196);
+        }
+        #main #footer{
+            height:25px;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="head">HEAD</div>
+        <div id="head-link">HEAD-LINK</div>
+        <div id="container">
+            <div id="left">
+                LEFT
+            </div>
+            <div id="content">CONTENT</div>
+            <div id="right">RIGHT</div>
+        </div>
+        <div id="footer">FOOTER</div>
+    </div>
+</body>
+</html>
