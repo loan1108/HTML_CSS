@@ -2,101 +2,117 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="view-countport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <title>Phim hoạt hình</title>
     <style>
       * {
         margin: 0;
         padding: 0;
+        color: #0d0303;
       }
-      #header {
+      header {
         height: 50px;
         width: 100%;
         background-color: gainsboro;
         display: flex;
-        justify-content: start;
+        justify-content: flex-start;
         align-items: center;
         padding-left: 30px;
+        font-size: 30px;
+        position: fixed;
+        top: 0;
+        z-index: 1000;
       }
-      #header p {
-        font-size: 25px;
-      }
-      #header p span {
+      header p #logo {
         display: inline-block;
-        border-radius: 5px;
-        color: white;
-        background-color: rgb(220, 37, 37);
+        background-color: #f90000;
+        border-radius: 10px;
+        color: #ffffff;
       }
-      #header-link {
+      nav {
         width: 100%;
         height: 35px;
-        background-color: gainsboro;
-        border-bottom: 2px solid white;
-        border-top: 2px solid white;
         display: flex;
         justify-content: center;
         align-items: center;
+        position: fixed;
+        top: 50px;
+        z-index: 1000;
+        border-bottom: 2px solid white;
+        border-top: 2px solid white;
+        background-color: gainsboro;
       }
-      #header-link a {
+      nav a {
         text-decoration: none;
         padding-left: 10px;
         padding-right: 10px;
-        color: black;
-      }
-      #favorite-anime {
+        font-weight: bold;
         border-left: 1px solid black;
-        border-right: 1px solid black;
       }
-      #anime-character {
-        border-right: 1px solid black;
+      nav #anime-category {
+        border-left: none;
       }
-      #footer {
+      main {
         width: 100%;
-        height: 40px;
+        height: 880px;
+        position: fixed;
+        margin-top: 85px;
+      }
+      main #left-content {
+        width: 30%;
+        box-sizing: border-box;
+        padding: 5px;
+        float: left;
+        height: 100%;
+        overflow-x: auto;
+      }
+      main #left-content .item {
+        margin-bottom: 20px;
+      }
+      main #left-content .item img {
+        width: 100%;
+      }
+      main #left-content .item h3 {
+        font-size: 14px;
+      }
+      main #left-content .item .view-count,
+      main #right-content .view-count {
+        font-weight: normal;
+      }
+      main #right-content {
+        width: 70%;
+        float: right;
+        height: 100%;
+        overflow-x: auto;
+      }
+      footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 30px;
         background-color: gainsboro;
         display: flex;
         justify-content: center;
         align-items: center;
-      }
-      #content {
-        display: flex;
-      }
-      #left-content {
-        width: 30%;
-        padding: 4px;
-        border: 4px solid gainsboro;
-      }
-      #left-content .item {
-        margin-bottom: 20px;
-      }
-      #left-content .item img {
-        width: 100%;
-      }
-      #left-content .item h3 {
-        font-size: 14px;
-      }
-      #left-content .item .view, #right-content .view{
-        font-weight: normal;
-      }
-      #right-content {
-        padding: 4px 10px;
-        width: 70%;
       }
     </style>
   </head>
   <body>
-    <div id="header">
+    <header>
       <p>
-        <i>Phim <span>Hoạt Hình</span></i>
+        <i>Phim <span id="logo">Hoạt Hình</span></i>
       </p>
-    </div>
-    <div id="header-link">
+    </header>
+    <nav>
       <a href="#" id="anime-category">Phim hoạt hình</a>
       <a href="#" id="favorite-anime">Phim hoạt hình yêu thích</a>
       <a href="#" id="anime-character">Nhân vật hoạt hình</a>
       <a href="#"> Góp ý</a>
-    </div>
-    <div id="content">
+    </nav>
+    <main>
       <div id="left-content">
         <div class="item">
           <div>
@@ -105,7 +121,7 @@
           <div>
             <h3 class="anime-title">
               Welcome đến với khách sạn Nobi -
-              <span class="view">3,000,000 lượt xem</span>
+              <span class="view-count">3,000,000 lượt xem</span>
             </h3>
             <p class="channel">Channel Fun</p>
           </div>
@@ -116,7 +132,8 @@
           </div>
           <div>
             <h3 class="anime-title">
-              Suneo khổng lồ - <span class="view">2,000,000 lượt xem</span>
+              Suneo khổng lồ -
+              <span class="view-count">2,000,000 lượt xem</span>
             </h3>
             <p class="channel">Doraemon Vietsub</p>
           </div>
@@ -127,7 +144,8 @@
           </div>
           <div>
             <h3 class="anime-title">
-              Còi điều khiển vật - <span class="view">1,500,000 lượt xem</span>
+              Còi điều khiển vật -
+              <span class="view-count">1,500,000 lượt xem</span>
             </h3>
             <p class="channel">Doraemon Vietsub</p>
           </div>
@@ -139,20 +157,20 @@
           <div>
             <h3 class="anime-title">
               Chiếc máy tạo kẹo bông-
-              <span class="view">4,000,000 lượt xem</span>
+              <span class="view-count">4,000,000 lượt xem</span>
             </h3>
             <p class="channel">Doraemon Vietsub</p>
           </div>
         </div>
       </div>
       <div id="right-content">
-        <video width="100%" height="400px" controls>
+        <video width="100%" controls>
           <source src="movie.mp4" type="video/mp4" />
           <source src="movie.ogg" type="video/ogg" />
         </video>
         <div class="anime-details">
           <h3 class="anime-title">
-            Tớ là Mori- <span class="view">5,345,555 lượt xem</span>
+            Tớ là Mori- <span class="view-count">5,345,555 lượt xem</span>
           </h3>
           <p class="author">Tác giả</p>
           <p class="infor">
@@ -160,7 +178,21 @@
             Bàng cứu công chúa, dùng tiếng đàn nhân nghĩa dẹp tan quân xâm lăng.
             Nhưng cuộc đời Thạch Sanh luôn bị tên Lý Thông làm cho điêu đứng.
             Cuối cùng chính nghĩa đã thắng. Tên Lý Thông gian ác bị đền tội. Mời
-            các bạn đón xem và cảm nhận.<br><br>
+            các bạn đón xem và cảm nhận.<br /><br />
+            Bộ phim kể về câu chuyện Thạch Sanh chém Trằn Tinh cứu dân, bắn Đại
+            Bàng cứu công chúa, dùng tiếng đàn nhân nghĩa dẹp tan quân xâm lăng.
+            Nhưng cuộc đời Thạch Sanh luôn bị tên Lý Thông làm cho điêu đứng.
+            Cuối cùng chính nghĩa đã thắng. Tên Lý Thông gian ác bị đền tội. Mời
+            các bạn đón xem và cảm nhận.<br /><br />
+            Bộ phim kể về câu chuyện Thạch Sanh chém Trằn Tinh cứu dân, bắn Đại
+            Bàng cứu công chúa, dùng tiếng đàn nhân nghĩa dẹp tan quân xâm lăng.
+            Nhưng cuộc đời Thạch Sanh luôn bị tên Lý Thông làm cho điêu đứng.
+            Cuối cùng chính nghĩa đã thắng. Tên Lý Thông gian ác bị đền tội. Mời
+            các bạn đón xem và cảm nhận. Bộ phim kể về câu chuyện Thạch Sanh
+            chém Trằn Tinh cứu dân, bắn Đại Bàng cứu công chúa, dùng tiếng đàn
+            nhân nghĩa dẹp tan quân xâm lăng. Nhưng cuộc đời Thạch Sanh luôn bị
+            tên Lý Thông làm cho điêu đứng. Cuối cùng chính nghĩa đã thắng. Tên
+            Lý Thông gian ác bị đền tội. Mời các bạn đón xem và cảm nhận.<br /><br />
             Bộ phim kể về câu chuyện Thạch Sanh chém Trằn Tinh cứu dân, bắn Đại
             Bàng cứu công chúa, dùng tiếng đàn nhân nghĩa dẹp tan quân xâm lăng.
             Nhưng cuộc đời Thạch Sanh luôn bị tên Lý Thông làm cho điêu đứng.
@@ -170,13 +202,22 @@
             Bàng cứu công chúa, dùng tiếng đàn nhân nghĩa dẹp tan quân xâm lăng.
             Nhưng cuộc đời Thạch Sanh luôn bị tên Lý Thông làm cho điêu đứng.
             Cuối cùng chính nghĩa đã thắng. Tên Lý Thông gian ác bị đền tội. Mời
-            các bạn đón xem và cảm nhận.
+            các bạn đón xem và cảm nhận. Bộ phim kể về câu chuyện Thạch Sanh
+            chém Trằn Tinh cứu dân, bắn Đại Bàng cứu công chúa, dùng tiếng đàn
+            nhân nghĩa dẹp tan quân xâm lăng. Nhưng cuộc đời Thạch Sanh luôn bị
+            tên Lý Thông làm cho điêu đứng. Cuối cùng chính nghĩa đã thắng. Tên
+            Lý Thông gian ác bị đền tội. Mời các bạn đón xem và cảm nhận.<br /><br />
+            Bộ phim kể về câu chuyện Thạch Sanh chém Trằn Tinh cứu dân, bắn Đại
+            Bàng cứu công chúa, dùng tiếng đàn nhân nghĩa dẹp tan quân xâm lăng.
+            Nhưng cuộc đời Thạch Sanh luôn bị tên Lý Thông làm cho điêu đứng.
+            Cuối cùng chính nghĩa đã thắng. Tên Lý Thông gian ác bị đền tội. Mời
+            các bạn đón xem và cảm nhận.<br><br>
           </p>
         </div>
       </div>
-    </div>
-    <div id="footer">
+    </main>
+    <footer>
       <p>@2017 - Thiết kế web bởi hoathinhvn.net</p>
-    </div>
+    </footer>
   </body>
 </html>
