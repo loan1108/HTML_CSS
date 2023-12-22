@@ -9,6 +9,9 @@
             padding:0;
             margin:0;
         }
+        body{
+            margin:20px;
+        }
         .header{
             height: 100px;
             /* border:1px solid black */
@@ -27,15 +30,203 @@
             /* width:79%; */
             float: left;
         }
+        .navbar{
+            height:50px;
+            border:1px solid black;
+            margin-top:5px;
+        }
+        .header-link{
+            list-style-type: none;
+            height:100%;
+            width:fit-content;
+            display:flex;
+            justify-content: flex-start;
+            align-items: center;
+            float:left;
+            
+        }
+         .header-link li a {
+            text-decoration: none;
+            display:block;
+            float:left;
+            padding: 0px 5px;
+            border-right:1px solid black;
+            color:black;
+        }
+        .header-link .contact-us{
+            border-right: none;
+        }
+        .navbar .search-bar{
+            width:200px;
+            height:25px;
+            display: block;
+            margin-top:12.5px;
+            margin-right:5px;
+            float:right;
+            border-radius: 8px;
+            
+        }
+        .footer{
+            height:50px;
+            width:100%;
+            border:1px solid black;
+            margin-top:5px;
+        }
+        .footer .header-link{
+            float:right;
+        }
+        .footer .loyalty {
+            padding-left:5px;
+            margin-top:12.5px;
+            display:inline-block;
+        }
+        .main{
+            width:100%;
+            height:700px;
+            margin-top:5px;
+            /* border: 1px solid black; */
+        }
+        .main .left-sidebar{
+            width:15%;
+            height: 100%;
+            float:left;
+            /* border:1px solid black; */
+        }
+        .main .right-sidebar{
+            width:20%;
+            height: 100%;
+            float:right;
+            border:1px solid black;
+        }
+        .main .content{
+            margin-left:5px;
+            margin-right:5px;
+            /* border:1px solid black; */
+            width:calc(100% - 15% - 20% - 5px - 5px - 1px - 1px - 1px - 1px - 1px - 1px);
+            height:100%;
+            float: left;;
+        }   
+        .main .content .hot-items {
+            width:100%;
+            height: 150px;
+            /* border:1px solid black; */
+        }
+        .main .content .hot-items .hot-news , .photo-side{
+            width:calc((100% - 1px - 1px - 1px - 1px - 5px) / 2);
+            height:100%;
+            border:1px solid black;
+            display: inline-block;
+            
+        }
+        .main .content .news .news-column {
+            width: calc(100% / 3);
+            float:left;
+        }
+        .main .content .news .news-column .news-box {
+            width: calc(100% - 5px -5px - 1px - 1px);
+            height:150px;
+            margin:5px;
+            border:1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main .left-sidebar .nav-sidebar{
+            list-style-type: none;
+            width: 100%;
+            height: 150px;
+            border:1px solid black;
+            padding-left:10px;
+            box-sizing: border-box;
+        }
+        .main .left-sidebar .nav-sidebar a{
+            text-decoration: none;
+            color:black;
+            line-height: 1.8;
+        }
+        .main .left-sidebar .other-items{
+            width:100%;
+            height: calc(100% - 150px - 5px);
+            margin-top:5px;
+            border: 1px solid black;
+        }
+        .main .right-sidebar .calendar, .graph, .map{
+            width: calc(100% - 5px - 5px - 1px - 1px);
+            height: calc((100% - 5px - 5px - 5px - 5px - 5px - 5px) / 3);
+            margin : 5px; 
+            border: 1px solid black; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     </style>
 </head>
 <body>
     <div class="header">
-        <div class="logo"></div>
-        <div class="banner"></div>
+        <div class="logo">Logo</div>
+        <div class="banner">Banner</div>
     </div>
-    <div class="navbar"></div>
-    <div class="main"></div>
-    <div class="footer"></div>
+    <div class="navbar">
+        <ul class="header-link">
+            <li><a href="# ">Home</a></li>
+            <li><a href="#">Students</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#" class="contact-us">Contact us</a></li>
+        </ul>
+        <input type="search" placeholder="Search" class="search-bar">
+    </div>
+    <div class="main">
+        <div class="left-sidebar">
+            <ul class="nav-sidebar">
+                <li><a href="#">Introduction</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Education</a></li>
+                <li><a href="#">Register</a></li>
+                <li><a href="#">Courses</a></li>
+            </ul>
+            <div class="other-items"></div>
+        </div>
+        <div class="content">
+            <div class="hot-items">
+                <div class="hot-news">Hot news</div>
+                <div class="photo-side">Photo side</div>
+            </div>
+            <div class="news">
+                <div class="news-column">
+                    <div class="news-box ">Box 1</div>
+                    <div class="news-box ">Box 2</div>
+                    <div class="news-box ">Box 7</div>
+                </div>
+                <div class="news-column">
+                    <div class="news-box ">Box 3</div>
+                    <div class="news-box ">Box 4</div>
+                    <div class="news-box ">Box 8</div>
+                </div>
+                <div class="news-column">
+                    <div class="news-box ">Box 5</div>
+                    <div class="news-box ">Box 6</div>
+                    <div class="news-box ">Box 9</div>
+                </div>
+    
+            </div>
+        </div>
+        <div class="right-sidebar">
+            <div class="calendar">Calendar</div>
+            <div class="graph">Graph</div>
+            <div class="map">Map</div>
+
+        </div>
+    </div>
+    <div class="footer">
+        <span class="loyalty">@2021 - TapChiLapTrinh</span>
+        <ul class="header-link">
+            <li><a href="# ">Home</a></li>
+            <li><a href="#">Students</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#" class="contact-us">Contact us</a></li>
+        </ul>
+    </div>
 </body>
 </html>
