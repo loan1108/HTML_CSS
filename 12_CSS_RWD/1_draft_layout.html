@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/927b705043.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .header ,.footer{
+            width:100%;
+            height:70px;
+            border:1px solid black;
+            background-color: rgb(30, 29, 29);
+        }
+        .footer{
+            color:white;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .header .logo, .nav-link, .nav-link li,.login{
+            height:100%;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            color:gainsboro;
+
+        }
+        .header .logo, .nav-link{
+            float:left;
+        }
+        .header .logo{
+            height:100%;
+            width:60px;
+        }
+        .header .nav-link{
+            list-style-type: none;
+        }
+        .header .nav-link li{
+            float:left;
+            height:100%;
+            padding: 0 10px;
+        }
+        .header .nav-link li a{
+            text-decoration: none;
+            color:gainsboro;
+            text-align: center;
+
+        }
+        .header .nav-link li:hover{
+            background-color:black ;
+        }
+        .header .nav-link li a:hover{
+            color:white;
+        }
+        .header .login{
+            float:right;
+            margin-right: 20px;
+        }
+        .header .login .login-icon{
+            margin-right:5px;
+        }
+        .main {
+            width:100%;
+            height:570px;
+        }
+        .main .left, .mid, .right{
+            float:left;
+        }
+        .main .left, .right{
+            width:15%;
+            height:100%;
+            /* border:1px solid black; */
+            background-color: rgb(237, 235, 235);
+        }
+        .main .mid{
+            width:calc(100% - 15% * 2 - 2px - 2px);
+            height:100%
+        }
+        .main .left .item{
+            height:30px;
+            width:100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0;
+        }
+        .main .right .advertisement{
+            height: 70px;
+            margin: 30px;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main .mid .welcome, .test{
+            width:100%;
+            padding:10px;
+            height: 50%;
+        }
+        .main .mid .welcome{
+            border-bottom:1px solid rgb(237, 235, 235);
+        }
+        @media screen and (max-width:1000px) {
+            .main .left{
+                display:none;
+            }
+            .main .mid{
+                width:calc(100% - 15% - 2px - 2px);
+            }
+            
+        }
+        @media  screen and (max-width:700px) {
+            .main .right{
+                display:none;
+            }
+            .main .mid{
+                width:100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">Logo</div>
+        <ul class="nav-link">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+
+        </ul>
+        <div class="login">
+            <span class="login-icon"><i class="fa-solid fa-arrow-right-to-bracket"></i></span>
+            <span>Login</span>
+        </div>
+    </div>
+    <div class="main">
+        <div class="left">
+            <div class="item"><a href="#">Link</a></div>
+            <div class="item"><a href="#">Link</a></div>
+            <div class="item"><a href="#">Link</a></div>
+        </div>
+        <div class="mid">
+            <div class="welcome">
+                <h1>Welcome</h1>
+                <p>This is Welcome</p>
+            </div>
+            <div class="test">
+                <h2>Test</h2>
+                <p>This is test</p>
+            </div>
+        </div>
+        <div class="right">
+            <div class="advertisement">AD</div>
+            <div class="advertisement">AD</div>
+        </div>
+    </div>
+    <div class="footer">Footer Text</div>
+</body>
+</html>

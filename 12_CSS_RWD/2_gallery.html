@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .header .title{
+        margin-bottom:25px;
+      }
+      .main {
+        width: 100%;
+        height: 200px;
+        margin: 25px 0;
+      }
+      .box-img {
+        width: calc(
+          (100% - 2px - 2px - 2px - 2px - 10px - 10px - 10px - 10px) / 4
+        );
+        height: 100%;
+        border: 1px solid black;
+        float: left;
+        margin: 0 5px;
+      }
+      .box-img img {
+        width: 100%;
+        height: 80%;
+        display: inline-block;
+      }
+      .box-img .img-description {
+        height: 20%;
+        text-align: center;
+      }
+      @media screen and (max-width: 768px) {
+        .box-img {
+          width: calc(
+            (100% - 2px - 2px - 2px - 2px - 10px - 10px - 10px - 10px) / 2
+          );
+          margin-bottom: 5px;
+        }
+      }
+      @media screen and (max-width: 500px) {
+        .box-img {
+          width: 100%;
+          margin-bottom: 5px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1 class="title">Responsive Image Gallery</h1>
+      <h5>Resize the browser window to see the effect.</h5>
+    </div>
+    <div class="main">
+      <div class="box-img">
+        <img src="assets/img/img_fjords.jpg" alt="fjords" />
+        <p class="img-description">Add a description of the image here</p>
+      </div>
+      <div class="box-img">
+        <img src="assets/img/img_forest.jpg" alt="forest" />
+        <p class="img-description">Add a description of the image here</p>
+      </div>
+      <div class="box-img">
+        <img src="assets/img/img_lights.jpg" alt="lights" />
+        <p class="img-description">Add a description of the image here</p>
+      </div>
+      <div class="box-img">
+        <img src="assets/img/img_mountains.jpg" alt="mountains" />
+        <p class="img-description">Add a description of the image here</p>
+      </div>
+    </div>
+    <div class="footer">
+      <p>
+        This example use media queries to re-arrange the images on different
+        screen sizes: for screens larger than 700px wide, it will show four
+        images side by side, for screens smaller than 700px, it will show two
+        images side by side. For screens smaller than 500px, the images will
+        stack vertically (100%).
+      </p>
+    </div>
+  </body>
+</html>
