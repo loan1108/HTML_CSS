@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header{
+            width:100%;
+            height:150px;
+            display:flex;
+        }
+        .logo{
+            width:25%;
+            height:100%;
+            box-sizing: border-box;
+            border: 1px solid black;
+        }
+        .banner{
+            width:75%;
+            height:100%;
+            box-sizing: border-box;
+            border:1px solid black;
+            margin-left:5px;
+            display:flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .nav-bar{
+            width:100%;
+            height:50px;
+            margin-top:5px;
+            border:1px solid black;
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-bar .menu{
+            display: flex;
+        }
+        .nav-bar .menu .menu-item{
+            padding-right:10px;
+            border-right: 1px solid black;
+
+        }
+        .search{
+            display:flex;
+        }
+        .search .search-bar{
+            margin-left:10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo"></div>
+        <div class="banner">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+            <div class="item">D</div>
+            <div class="item">E</div>
+        </div>
+    </div>
+    <div class="nav-bar">
+        <div class="menu">
+            <div class="menu-item">Home</div>
+            <div class="menu-item">Students</div>
+            <div class="menu-item">Courses</div>
+            <div class="menu-item">About us</div>
+            <div class="menu-item">Contact us</div>
+        </div>
+        <div class="search">
+            <div class="login">
+                <button type="button">Login</button>
+            </div>
+            <div class="search-bar">
+                <input type="search" placeholder="Search">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
