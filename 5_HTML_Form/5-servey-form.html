@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Market Research Survey</title>
     <style>
+      body{
+        margin:50px;
+      }
         div{
             margin-bottom:20px;
         }
@@ -48,10 +51,10 @@
     <h1>Market Research Survey</h1>
     <p>Please take a few moments to complete this satisfaction survey</p>
     <hr />
-    <form>
+    <form action="#" method="post">
       <div>
         <label for="">What is your age range?</label><br />
-        <select name="">
+        <select name="age">
           <option value="10-20" selected>10-20</option>
           <option value="20-30">20-30</option>
           <option value="30-40">30-40</option>
@@ -60,7 +63,7 @@
       </div>
       <div>
         <label for="">What is your yearly income rage?</label><br />
-        <select name="">
+        <select name="income">
           <option value="$0-$10,000" selected>$0-$10,000</option>
           <option value="$10,000-$20,000">$10,000-$20,000</option>
           <option value="$20,000-$30,000">$20,000-$30,000</option>
@@ -69,7 +72,7 @@
       </div>
       <div>
         <label for="gender">Gender</label><br />
-        <input type="radio" name="gender" value="male" />Male<br />
+        <input type="radio" name="gender" value="male" checked/>Male<br />
         <input type="radio" name="gender" value="female" />Female
       </div>
       <div>
@@ -77,18 +80,18 @@
           >Which of the following products have your purchased in the last 2
           months. Please check all that apply</label
         ><br />
-        <input type="checkbox" name="bought-product" value="product-1" />Product
+        <input type="checkbox" name="bought-product-1" value="product-1" checked/>Product
         1<br />
-        <input type="checkbox" name="bought-product" value="product-2" />Product
+        <input type="checkbox" name="bought-product-2" value="product-2" />Product
         2<br />
-        <input type="checkbox" name="bought-product" value="product-3" />Product
+        <input type="checkbox" name="bought-product-3" value="product-3" />Product
         3
       </div>
       <div>
         <label for="frequency-rate"
           >How often would you use our new product?</label
         ><br />
-        <input type="radio" name="frequency-rate" value="daily" />Daily<br />
+        <input type="radio" name="frequency-rate" value="daily" checked />Daily<br />
         <input type="radio" name="frequency-rate" value="weekly" />Weekly<br />
         <input
           type="radio"
@@ -140,57 +143,57 @@
             <tr>
               <th>Our products are priced fairly</th>
               <td>
-                <input type="radio" name="rate" value="1" />
+                <input type="radio" name="price-rate" value="1" />
                 1
               </td>
               <td>
-                <input type="radio" name="rate" value="2" />
+                <input type="radio" name="price-rate" value="2" />
                 2
               </td>
               <td>
-                <input type="radio" name="rate" value="3" />
+                <input type="radio" name="price-rate" value="3" />
                 3
               </td>
               <td>
-                <input type="radio" name="rate" value="4" />
+                <input type="radio" name="price-rate" value="4" checked/>
                 4
               </td>
             </tr>
             <tr>
               <th>Our products are high quality</th>
               <td>
-                <input type="radio" name="rate" value="1" />
+                <input type="radio" name="quality-rate" value="1" />
                 1
               </td>
               <td>
-                <input type="radio" name="rate" value="2" />
+                <input type="radio" name="quality-rate" value="2" />
                 2
               </td>
               <td>
-                <input type="radio" name="rate" value="3" />
+                <input type="radio" name="quality-rate" value="3" />
                 3
               </td>
               <td>
-                <input type="radio" name="rate" value="4" />
+                <input type="radio" name="quality-rate" value="4" checked/>
                 4
               </td>
             </tr>
             <tr>
               <th>You would recommend our product to a friend or coworker</th>
               <td>
-                <input type="radio" name="rate" value="1" />
+                <input type="radio" name="recommend-rate" value="1" />
                 1
               </td>
               <td>
-                <input type="radio" name="rate" value="2" />
+                <input type="radio" name="recommend-rate" value="2" />
                 2
               </td>
               <td>
-                <input type="radio" name="rate" value="3" />
+                <input type="radio" name="recommend-rate" value="3" />
                 3
               </td>
               <td>
-                <input type="radio" name="rate" value="4" />
+                <input type="radio" name="recommend-rate" value="4" checked/>
                 4
               </td>
             </tr>
