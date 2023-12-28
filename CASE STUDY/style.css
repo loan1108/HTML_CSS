@@ -2,11 +2,14 @@
   margin: 0;
   padding: 0;
 }
+body{
+  display:flex;
+}
 .buddy-panel {
   width: 68px;
   height: 100vh;
   padding: 0 10px;
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   align-items: center;
   -webkit-box-shadow: 2px 0px 0px 0px rgba(255,255,255,1);
@@ -54,4 +57,52 @@ box-shadow: 2px 0px 0px 0px rgba(255,255,255,1);
 .buddy-panel .panel-head:hover,
 .menu-item:hover {
   background-color: #939597;
+}
+
+.main {
+  width:calc(100% - 68px);
+  display: flex;
+}
+.main .header{
+  width:100%;
+  height:76px;
+  display:flex;
+  border:1px solid black;
+  justify-content: space-between;
+  align-items: center;
+  padding:0 30px;
+
+}
+.main .header .logo{
+  padding-right:30px;
+}
+.main .header .primary-menu{
+  list-style-type: none;
+  display:flex;
+  justify-content: flex-start;
+  flex-grow:2;
+}
+.main .header .primary-menu .primary-menu-item{
+  padding:10px 10px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  /* border:1px solid transparent; */
+  
+}
+.main .header .primary-menu .primary-menu-item:hover, .main .header .header-aside-inner .user-info:hover{
+  background-color: #007CFF;
+  border-radius: 5px;
+  /* color:white */
+}
+.main .header .header-aside-inner {
+  display:flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.main .header .header-aside-inner .search-bar, .notification, .user-info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:10px 10px;
 }
