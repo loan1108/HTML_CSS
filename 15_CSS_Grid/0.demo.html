@@ -5,62 +5,135 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        *{
-            margin:0;
-            padding:0;
-        }
-        a{
-            text-decoration: none;
-            color:black;
-        }
-        .container, .header , .main {
-            display: grid;
-        }
-        .container{
-            width:100%;
-            height:100vh;
-            grid-template-rows: 100px 60px 1fr 60px;
-            row-gap: 10px;
-
-        }
-        .container >div{
-            width:100%;
-            background-color: aliceblue;
-            border:1px solid black;
-        }
-        .header{
-            grid-template-columns: 200px 1fr;
-        }
-        .header>div{
-            width:100%;
-            background-color: lightgreen;
-            border:1px solid black;
-        }
-        .nav-bar, .nav-bar .menu, .footer{
-            display:flex;
-            align-items: center;
-        }
-        .nav-bar, .footer{
-            justify-content: space-between;
-            padding: 0 10px;
-            /* padding:0px 10px; */
-        }
-        .menu{
-            list-style-type: none;
-            display: flex;
-        }
-        .menu .menu-item{
-            padding:10px;
-            border-right:1px solid black;
-        }
-        .menu .menu-item:last-child{
-            border:none;
-        }
-        .nav-bar .search-bar input{
-            width:300px;
-            height:30px;
-            border-radius: 10px;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body{
+        overflow: hidden;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      .container,
+      .header,
+      .main {
+        display: grid;
+      }
+      .container {
+        width: 100vw;
+        height: 100vh;
+        grid-template-rows: 100px 60px 1fr 60px;
+        row-gap: 10px;
+        min-width: 0;
+      }
+      .container > div {
+        width: 100%;
+        /* border: 1px solid black; */
+      }
+      .header {
+        grid-template-columns: 300px 1fr;
+        border:none !important;
+      }
+      .header > div {
+        width: 100%;
+        border: 1px solid black;
+      }
+      .nav-bar,
+      .nav-bar .menu,
+      .footer {
+        display: flex;
+        align-items: center;
+      }
+      .nav-bar,
+      .footer {
+        justify-content: space-between;
+        padding: 0 10px;
+        box-sizing: border-box;
+        border: 1px solid black;
+      }
+      .menu {
+        list-style-type: none;
+        display: flex;
+      }
+      .menu .menu-item {
+        padding: 10px;
+        border-right: 1px solid black;
+      }
+      .menu .menu-item:last-child {
+        border: none;
+      }
+      .nav-bar .search-bar input {
+        width: 300px;
+        height: 30px;
+        border-radius: 10px;
+      }
+      .main {
+        grid-template-areas: "left mid right";
+        grid-template-columns: 200px 1fr 300px;
+      }
+      .main > div {
+        margin-right:10px;
+      }
+      .main >div:last-child{
+        margin-right:0px;
+      }
+      .main .left {
+        grid-area: left;
+        border:none;
+      }
+      .main .left .top-inside{
+        border: 1px solid black;
+        margin-bottom:10px;
+      }
+      .main .left .menu-item{
+        line-height: 2;
+        padding-left:10px;
+        width: 100%;
+        height:fit-content;
+        
+      }
+      .main .left .bottom-inside{
+        width:100%;
+        height:500px;
+        border:1px solid black;
+      }
+      .main .mid {
+        grid-area: mid;
+        display: grid;
+        grid-template-areas: 
+        "hot-news photo-side"
+        "news news";
+        grid-template-rows: 150px 1fr;
+        column-gap: 10px;
+      }
+      .main .mid>div{
+        border:1px solid black;
+      }
+      .main .mid> div:last-child{
+        width:100%;
+        margin-top:10px;
+        grid-area: news;
+        display:grid;
+        grid-template-areas: "news news news";
+        gap:10px;
+        grid-template-rows: 150px;
+        border:none;
+      }
+      .main .mid .news .news-item {
+        height: 150px;
+        border:1px solid rgb(30, 19, 19);  
+      }
+      .main .right {
+        grid-area: right;
+        display:grid;
+        row-gap:10px;
+        border:none;
+      }
+      .main .right>div{
+        border:1px solid black;
+      }
     </style>
   </head>
   <body>
@@ -71,51 +144,85 @@
       </div>
       <div class="nav-bar">
         <ul class="menu">
-            <div class="menu-item">
-                <a href="#">Home</a>
-            </div>
-            <div class="menu-item">
-                <a href="#">Students</a>
-            </div>
-            <div class="menu-item">
-                <a href="#">Courses</a>
-            </div>
-            <div class="menu-item">
-                <a href="#">About us</a>
-            </div>
-            <div class="menu-item">
-                <a href="#">Contact us</a>
-            </div>
+          <div class="menu-item">
+            <a href="#">Home</a>
+          </div>
+          <div class="menu-item">
+            <a href="#">Students</a>
+          </div>
+          <div class="menu-item">
+            <a href="#">Courses</a>
+          </div>
+          <div class="menu-item">
+            <a href="#">About us</a>
+          </div>
+          <div class="menu-item">
+            <a href="#">Contact us</a>
+          </div>
         </ul>
         <div class="search-bar">
-            <input type="search" placeholder="Search">
+          <input type="search" placeholder="Search" />
         </div>
       </div>
       <div class="main">
-        <div class="left"></div>
-        <div class="mid"></div>
-        <div class="right"></div>
+        <div class="left">
+            <ul class="top-inside">
+                <li class="menu-item">
+                    <a href="#">Introduction</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">News</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">Education</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">Register</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">Courses</a>
+                </li>
+            </ul>
+            <div class="bottom-inside"></div>
+        </div>
+        <div class="mid">
+            <div class="hot-news">Hot-news</div>
+            <div class="photo-side">Photo-side</div>
+            <div class="news">
+                <div class="news-item">News 1</div>
+                <div class="news-item">News 2</div>
+                <div class="news-item">News 3</div>
+                <div class="news-item">News 4</div>
+                <div class="news-item">News 5</div>
+                <div class="news-item">News 6</div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="calendar">Calendar</div>
+            <div class="graph">graph</div>
+            <div class="map">map</div>
+        </div>
       </div>
       <div class="footer">
         <div class="loyalty">
-            <h3>@2022 - Học lập trình</h3>
+          <h3>@2022 - Học lập trình</h3>
         </div>
         <ul class="menu">
-            <div class="menu-item">
-                <a href="#">Home</a>
-            </div>
-            <div class="menu-item">
-                <a href="#">Students</a>
-            </div>
-            <div class="menu-item">
-                <a href="#">Courses</a>
-            </div>
-            <div class="menu-item">
-                <a href="#">About us</a>
-            </div>
-            <div class="menu-item">
-                <a href="#">Contact us</a>
-            </div>
+          <div class="menu-item">
+            <a href="#">Home</a>
+          </div>
+          <div class="menu-item">
+            <a href="#">Students</a>
+          </div>
+          <div class="menu-item">
+            <a href="#">Courses</a>
+          </div>
+          <div class="menu-item">
+            <a href="#">About us</a>
+          </div>
+          <div class="menu-item">
+            <a href="#">Contact us</a>
+          </div>
         </ul>
       </div>
     </div>
