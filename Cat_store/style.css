@@ -1,0 +1,69 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-size:12px;
+    font-weight: 700;
+    font-family:Arial, Helvetica, sans-serif;
+    line-height: 14px;
+    color:#fff;
+}
+.top-banner{
+    height:30px;
+    background-color: #b53229;
+}
+.wh-web{
+    height: 100%;
+    width:1140px;
+}
+.contact i{
+    padding:0 5px;
+}
+.header{
+    height:89px;
+    background-color: #fcb900;
+}
+.logo img{
+    width:70px;
+    height:70px;
+}
+.search-btn{
+    background: #b53229;
+}
+.input-search{
+    width:80%;
+    padding-left:10%;
+}
+.address{
+    color:rgba(0,0,0,0.91);
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+    padding-right:10px;
+}
+.noti i{
+    font-size: 20px;
+}
+.noti div{
+    background-color: #b53229;
+    border-radius: 50%;
+    top:-10px;
+    right:-10px;
+    width:15px;
+    height:15px;
+}
+.nav-bar{
+    height:50px;
+    
+}
+.item{
+    color:#e51f28;
+    display:flex;
+    flex-grow: 1;
+    font-size:15px;
+}
+.item button{
+    border:none;
+    color:#e51f28;
+    background-color: transparent;
+    font-size:15px;
+}
