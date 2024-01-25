@@ -1,11 +1,13 @@
+
 @mixin banner {
   width: 100%;
+  min-width: $min-width;
   height: 250px;
   display: flex;
   justify-content: center;
 }
 @mixin banner-inner {
-  min-width: $web-width;
+  width: $web-width;
   height: 100%;
   img {
     width: 100%;
@@ -15,13 +17,15 @@
 @mixin nav-bar {
   width: 100%;
   height: 40px;
+  min-width: $min-width;
   background-color: $nav-bar-bg;
   display: flex;
   justify-content: center;
 }
 @mixin nav-bar-inner {
   height: 100%;
-  min-width: $web-width;
+  width: $web-width;
+  margin: 0 $web-margin-left-right;
   display: flex;
   li {
     flex-grow: 1;

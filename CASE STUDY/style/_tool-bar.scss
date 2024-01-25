@@ -1,13 +1,15 @@
 .tool-bar {
   width: 100vw;
+  min-width:$min-width;
   height: 25px;
   background-color: $tool-bar-bg;
   display: flex;
   justify-content: center;
 
   .tool-bar-inner {
-    min-width: $web-width;
+    width: $web-width;
     height: 100%;
+    margin:0px $web-margin-left-right;
     .left {
       a {
         margin-right: 8px;

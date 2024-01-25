@@ -1,17 +1,18 @@
 .header{
     width:100vw;
     height:360px;
-    // background-color: aquamarine;
     .top-header{
         width:100%;
+        min-width:$min-width;
         height:70px;
-        background-color: $top-header-bg;
+        background-color: red;
         display: flex;
         justify-content: center;
         .top-header-inner{
-            min-width:$web-width;
+            width:$web-width;
             height:100%;
             display: flex;
+            margin:0px $web-margin-left-right;
             .logo{
                 height:100%;
                 img{
